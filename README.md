@@ -3,4 +3,4 @@ Welcome! This repository contains the code related to the Applied Machine Learni
 
 Lecturer: Hossein Homaei
 
-Affiliation: Assistant Professor at the Department of Electrical and Computer Engineering at Tarbiat Modares University
+Affiliation: Assistant Professor at the Department of Electrical and Computer Engineering- Tarbiat Modares University
