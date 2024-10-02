@@ -1,0 +1,137 @@
+******************************************
+Convert .py tp .ipynb
+******************************************
+1- To specify a markdown cell when the .py file converts to .ipynb file, use the following command in .py file, at the begining of the text:
+# %% [markdown]
+
+2- To specify a code cell when the .py file converts to .ipynb file, use the following command in .py file, at the begining of the code lines:
+# %%
+
+3- Press ctrl + Shift + P and type "Jupyter: Export Current Python file and Output as Jupyter Notebook" in the command Palette.
+
+4- Save the file
+
+
+******************************************
+Jupyter Markdown cheat sheet 
+******************************************
+
+Headers
+==========================================
+# Notebook title
+## Header 1
+### Header 2
+#### Header 3
+##### Header 4
+
+Line break
+==========================================
+- Method-1: place two or more empty spaces at the end of a line
+Line1⌴⌴line2 (two space)
+- Method-2: use <br> at the end of the first line
+
+Font format
+==========================================
+<b>bold text</b>
+<i>italic text</i>
+<strike>strike text</strike>
+<u>underline text</u>
+
+Colors
+==========================================
+1- Change text color:
+- Method 1:
+<font color='red'>my text</font>
+- Method 2:
+$\color{red}{\text{my text}}$
+- Method 3:
+<span style='color:red'>my text</span>
+
+2- Highlight:
+- Method 1:
+<mark>Marked text</mark>
+- Mthod 2:
+<span style="background-color: #FFFF00">Marked text</span>
+- Method 3:
+<span style='background:yellow'>Marked text</span>
+
+Example:
+<span style='background:yellow'><font color='black'>folder</font></span>
+
+Bullets
+==========================================
+hyphen (-) or an asterisk (*)
+Example:
+* First item
+* Second item
+> * Subitem 1
+>> * Susubbitem 1
+>> * Susubbitem 2
+> * Subitem 2
+>> * Susubbitem 1
+>> * Susubbitem 2
+>> * Susubbitem 2
+* Third item
+
+Lists
+==========================================
+Use numbers and indentation or numbers and letters
+Example-1:
+1. First item
+2. Second item
+> 1. Subitem 1
+>> 1. Susubbitem 1
+>> 2. Susubbitem 2
+> 2. Subitem 2
+>> 1. Susubbitem 1
+>> 2. Susubbitem 2
+>> 2. Susubbitem 2
+3. Third item
+
+Example-2:
+1. Main list <br>
+a. Sub-list <br>
+b. sub list 
+2. Main list
+
+Mathematical Symbols
+==========================================
+$x + y = z$ (inline)
+or
+$$x + y = z$$ (display)
+
+Code
+==========================================
+1- Inline Code:
+This is the `inline code` format.
+
+Note: ` is backtick, the character under the Esc key on the keyboard.
+
+2- Block code
+Use the following format to highlight a code inside a markdown cell:
+
+```LANGUAGE
+code
+```
+
+Where LANGUAGE is the language of the code that you want to be highlighted.
+
+Example-1:
+```python
+my Python code
+```
+
+Example-2:
+```bash
+pip install numpy
+```
+
+Note: You may need a different name for shell scripts depending on the environment, i.e. console, shell, sh, and zsh.
+
+Some other common lanuages: c, cpp, csharp, java, html, js, php, xml, sql, ...
+
+Link
+==========================================
+[Link text](Address "optional tooltip")
+Example:
+	For more information [click here](https://www.modares.ac.ir/~homaei "Hossein Homaei Homepage")
