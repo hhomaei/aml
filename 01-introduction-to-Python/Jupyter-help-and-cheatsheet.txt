@@ -130,6 +130,30 @@ Note: You may need a different name for shell scripts depending on the environme
 
 Some other common lanuages: c, cpp, csharp, java, html, js, php, xml, sql, ...
 
+Table
+==========================================
+A simple table looks like this:
+| This   | is    | a       |
+| ---    | ---   | ---     |
+| simple | table | example |
+
+The first line of a table forms the head of the table. It is separated from the rest of the data by a line of dashes.
+
+Only one dash is sufficient to specify the line.
+The table columns do not have to align in the un-rendered text, but it improves readability of the doc.
+For example, The above mentioned example and the following are the same in the rendered markdown:
+|This|is|a|
+|-|-|-|
+|simple|table|example|
+
+You can use : in the line following the head to specify the text alignment in the table.
+If the colon is located at the left of the line of dashes, the data is rendered left-aligned. (This is also the default behaviour)
+If the colon is located at the right of the line of dashes, the data is rendered right-aligned.
+If the rendering hint is placed on both sides of the dashed line, the data is rendered as centered. Example:
+|This|is|a|
+|:-:|:-:|:-:|
+|simple|table|example|
+
 Link
 ==========================================
 [Link text](Address "optional tooltip")
