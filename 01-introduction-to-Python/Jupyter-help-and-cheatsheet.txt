@@ -1,0 +1,172 @@
+******************************************
+Convert .py to .ipynb
+******************************************
+1- To specify a markdown cell when the .py file converts to a .ipynb file, use the following command in the .py file, at the beginning of the text:
+# %% [markdown]
+
+2- To specify a code cell when the .py file converts to a .ipynb file, use the following command in the .py file, at the beginning of the code lines:
+# %%
+
+3- Press Ctrl + Shift + P and type "Jupyter: Export Current Python file and Output as Jupyter Notebook" in the command Palette.
+Note: Sometimes, when you run the above command, VS Code returns an error like this: 
+"Extension 'vscode.ipynb' is not known or not activated".
+In this situation, open an arbitrary .ipynb file in VS code and rerun the command!
+
+4- Save the file
+
+******************************************
+Built-in Jupyter commands
+******************************************
+Lots of built-in magic commands are available in Jupyter.  These commands are explained here: https://ipython.readthedocs.io/en/stable/interactive/magics.html.
+Investigating the whole list is out of the scope of this course. Here, I only emphasize one of them: %pip.
+To tun the pip package manager within the current kernel, use %pip.
+For example, to install a new Python package from within the Jupyter Notebook, it suffices to write the following line in a code cell.
+%pip install <package_name>
+
+******************************************
+Jupyter Markdown cheat sheet 
+******************************************
+
+Headers
+==========================================
+# Notebook title
+## Header 1
+### Header 2
+#### Header 3
+##### Header 4
+
+Line break
+==========================================
+- Method 1: Place two or more empty spaces at the end of a line
+Line1⌴⌴line2 (two space)
+- Method 2: use <br> at the end of the first line
+
+Font format
+==========================================
+<b>bold text</b>
+<i>italic text</i>
+<strike>strike text</strike>
+<u>underline text</u>
+
+Colors
+==========================================
+1- Change text color:
+- Method 1:
+<font color='red'>my text</font>
+- Method 2:
+$\color{red}{\text{my text}}$
+- Method 3:
+<span style='color:red'>my text</span>
+
+2- Highlight:
+- Method 1:
+<mark>Marked text</mark>
+- Method 2:
+<span style="background-color: #FFFF00">Marked text</span>
+- Method 3:
+<span style='background:yellow'>Marked text</span>
+
+Example:
+<span style='background:yellow'><font color='black'>folder</font></span>
+
+Bullets
+==========================================
+hyphen (-) or an asterisk (*)
+Example:
+* First item
+* Second item
+> * Subitem 1
+>> * Susubbitem 1
+>> * Susubbitem 2
+> * Subitem 2
+>> * Susubbitem 1
+>> * Susubbitem 2
+>> * Susubbitem 2
+* Third item
+
+Lists
+==========================================
+Use numbers and indentation or numbers and letters
+Example-1:
+1. First item
+2. Second item
+> 1. Subitem 1
+>> 1. Susubbitem 1
+>> 2. Susubbitem 2
+> 2. Subitem 2
+>> 1. Susubbitem 1
+>> 2. Susubbitem 2
+>> 2. Susubbitem 2
+3. Third item
+
+Example-2:
+1. Main list <br>
+a. Sub-list <br>
+b. sub-list 
+2. Main list
+
+Mathematical Symbols
+==========================================
+$x + y = z$ (inline)
+or
+$$x + y = z$$ (display)
+
+Code
+==========================================
+1- Inline Code:
+This is the `inline code` format.
+
+Note: ` is backtick, the character under the Esc key on the keyboard.
+
+2- Block code
+Use the following format to highlight a code inside a markdown cell:
+
+```LANGUAGE
+code
+```
+
+Where LANGUAGE is the language of the code that you want to be highlighted.
+
+Example-1:
+```python
+my Python code
+```
+
+Example-2:
+```bash
+pip install numpy
+```
+
+Note: You may need a different name for shell scripts depending on the environment, i.e. console, shell, sh, and zsh.
+
+Some other common languages: c, cpp, csharp, java, html, js, php, xml, sql, ...
+
+Table
+==========================================
+A simple table looks like this:
+| This   | is    | a       |
+| ---    | ---   | ---     |
+| simple | table | example |
+
+The first line of a table forms the head of the table. It is separated from the rest of the data by a line of dashes.
+
+Only one dash is sufficient to specify the line.
+The table columns do not have to align in the un-rendered text, but it improves readability of the doc.
+For example, The above mentioned example and the following are the same in the rendered markdown:
+|This|is|a|
+|-|-|-|
+|simple|table|example|
+
+You can use : in the line following the head to specify the text alignment in the table.
+If the colon is located at the left of the line of dashes, the data is rendered left-aligned. (This is also the default behaviour)
+If the colon is located at the right of the line of dashes, the data is rendered right-aligned.
+If the rendering hint is placed on both sides of the dashed line, the data is rendered as centered. Example:
+|This|is|a|
+|:-:|:-:|:-:|
+|simple|table|example|
+
+Link
+==========================================
+[Link text](Address "optional tooltip")
+Example:
+	For more information [click here](https://www.modares.ac.ir/~homaei "Hossein Homaei Homepage")
