@@ -1,6 +1,4 @@
 # Applied Machine Learning
-Welcome! This repository contains the code related to the Applied Machine Learning Course.
+Welcome!
 
-Lecturer: Hossein Homaei
-
-Affiliation: Assistant Professor at the Department of Electrical and Computer Engineering- Tarbiat Modares University
+This repo includes the slides, code, and homework for the Applied Machine Learning course taught by **Hossein Homaei** in **Tarbiat Modares** University's Department of Electrical and Computer Engineering.
