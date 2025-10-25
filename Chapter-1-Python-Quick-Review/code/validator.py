@@ -26,6 +26,6 @@ $     --->   the string must end with this regex pattern.
 
 def validate_email(email):
     if len(email) >= 6:
-        return bool(re.match("^.+@[a-zA-Z0-9-.]+.([a-zA-Z]{2,3}|[0-9]{1,3})(]?)$", email))
+        return bool(re.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email))
     return False
 
